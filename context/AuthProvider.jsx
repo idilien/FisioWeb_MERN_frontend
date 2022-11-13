@@ -56,8 +56,14 @@ const AuthProvider = ({children}) => {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/physios/profile/${datas._id}`
             const {data} = await axios.put(url, datas, config ) 
             console.log(data)
+            return {
+                msg: 'Actualizado Correctamente'
+            }
         } catch (error) {
-            console.log(error);
+            return{
+                msg: error.response.data.msg,
+                error: true
+            }
         }
     }
     
