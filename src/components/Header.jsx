@@ -3,7 +3,7 @@ import useAuth from "../hooks/useAuth"
 
 const Header = () => {
 
-    const {signOff} = useAuth() 
+  const {signOff} = useAuth() 
 
   return (
     <header className="py-10 bg-indigo-600">
@@ -23,5 +23,4 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header
