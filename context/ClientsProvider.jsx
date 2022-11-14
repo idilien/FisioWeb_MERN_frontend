@@ -34,8 +34,7 @@ const ClientsProvider = ({children}) => {
     
 
     const saveClient = async (client) => {
-
-      
+   
       const token = localStorage.getItem('fisioweb_token')
       const config = {
         headers: {

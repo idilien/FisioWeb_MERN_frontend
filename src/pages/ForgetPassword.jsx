@@ -36,7 +36,7 @@ const ForgetPassword = () => {
   return (
     <> 
         <div className="my-5 ">
-           <h1 className="text-indigo-500 font-black text-5xl text-center">Recuperar tu <br/> <span className="text-indigo-700"> Password</span></h1>
+           <h1 className="text-indigo-500 font-black text-3xl text-center">Recuperar tu <br/> <span className="text-indigo-700 text-4xl "> Password</span></h1>
         </div>
         <div className=' mt-20 md:mt-5 p-5 shadow-lg  rounded-lg bg-gray-200'>
         <form 
@@ -57,7 +57,7 @@ const ForgetPassword = () => {
             </div>
          
             <input 
-                    className="my-5 px-10 py-2 font-bold text-gray-100 w-full lg:w-auto  rounded-xl bg-indigo-500 hover:cursor-pointer hover:bg-indigo-400  "
+                    className="my-5 px-12 py-2 font-bold text-gray-100 w-full lg:w-auto  rounded-xl bg-indigo-500 hover:cursor-pointer hover:bg-indigo-400  "
                     type="submit"
                     value="Enviar"
             />
@@ -65,10 +65,10 @@ const ForgetPassword = () => {
                             alert={alert}
                       />}
         </form>
-        <nav className="mt-5  lg:flex lg:justify-between " >
-              <Link
-                      className='my-5 block text-center text-gray-500 '
-                      to="/">Inicio</Link>    
+        <nav className="mt-1  lg:flex lg:justify-between " >
+                        <Link
+                          className='my-5 px-5 py-1 font-semibold  block text-center text-indigo-500 border-2 border-indigo-500 rounded-xl hover:bg-indigo-500 hover:text-white '
+                          to="/">Tengo cuenta</Link>      
               
         </nav> 
 </div>

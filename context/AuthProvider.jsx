@@ -55,7 +55,6 @@ const AuthProvider = ({children}) => {
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/physios/profile/${datas._id}`
             const {data} = await axios.put(url, datas, config ) 
-            console.log(data)
             return {
                 msg: 'Actualizado Correctamente'
             }
@@ -66,7 +65,33 @@ const AuthProvider = ({children}) => {
             }
         }
     }
-    
+    const savePassword = async (datas) => {
+       
+        const token = localStorage.getItem('fisioweb_token')
+        if(!token) {
+            setLoading(false)
+            return
+        }
+        const config = {
+            headers:{
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`
+            }
+        }
+        try {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/api/physios/update-password`
+            const {data} = await axios.put(url, datas, config ) 
+            return {
+                msg: data.msg
+            }
+        } catch (error) {
+            return{
+                msg: error.response.data.msg,
+                error: true
+            }
+        }
+
+    }
 
     return(
         <AuthContext.Provider
@@ -75,7 +100,8 @@ const AuthProvider = ({children}) => {
                         setAuth,
                         loading,
                         signOff,
-                        updateProfile
+                        updateProfile,
+                        savePassword
                     }}
         >
                             {children}

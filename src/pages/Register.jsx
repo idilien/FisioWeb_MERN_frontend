@@ -43,7 +43,7 @@ const Register = () => {
   return (
     <>
         <div className="my-5 ">
-               <h1 className="text-indigo-500 font-black text-5xl text-center">Registrate y <br/> <span className="text-indigo-800"> crea una cuenta</span></h1>
+               <h1 className="text-indigo-500 font-black text-3xl text-center">Registrate y <br/> <span className="text-indigo-800 text-4xl"> crea tu cuenta</span></h1>
         </div>
         <div className=' mt-20 md:mt-5 p-5 shadow-lg  rounded-lg bg-indigo-100'>
 
@@ -115,9 +115,14 @@ const Register = () => {
             </form>
             <nav className="mt-5  lg:flex lg:justify-between " >
                   <Link
-                          className='my-5 block text-center text-gray-500 '
+                          className='my-5 px-8 py-1 font-semibold  block text-center text-indigo-500 border-2 border-indigo-500 rounded-xl hover:bg-indigo-500 hover:text-white '
                           to="/">Tengo cuenta</Link>    
+                  {/* <Link
+                          className='my-5 px-8 py-1 font-semibold  block text-center text-indigo-500 border-2 border-indigo-500 rounded-xl hover:bg-indigo-500 hover:text-white '
+                          to="/confirm/20">Confirmar Correo</Link>     */}
             </nav> 
+          
+          
         </div>
     </>
   )

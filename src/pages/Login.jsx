@@ -41,7 +41,9 @@ const Login = () => {
   return (
     <>
         <div className="my-5 ">
-               <h1 className="text-indigo-500 font-black text-4xl text-center">Iniciar Sesión <br/> <span className="text-indigo-800 text-5xl"> Profesionales</span></h1>
+               <h1 className="text-indigo-500 font-black text-3xl text-center">Iniciar Sesión <br/> <span className="text-indigo-800 text-4xl"> Profesionales</span></h1>
+               {/* <img className="" src="public/physio_img" alt="img physio" /> */}
+        
         </div>
         <div className=' mt-20 md:mt-5 p-5 shadow-lg  rounded-lg bg-gray-200'>
             <form onSubmit={handleSubmit}>
@@ -54,6 +56,7 @@ const Login = () => {
                     <input 
                             className="mt-2 p-1   bg-gray-300  w-full rounded-xl"
                             type="email"
+                            placeholder='correo@correo.com'
                             value={email}
                             onChange= {e => setEmail(e.target.value)}
                      />
@@ -67,6 +70,7 @@ const Login = () => {
                     <input 
                             className="mt-2 p-1   bg-gray-300  w-full rounded-xl"
                             type="password"
+                            placeholder='1234'
                             value={password}
                             onChange= {e => setPassword(e.target.value)}
                      />
@@ -74,18 +78,18 @@ const Login = () => {
                         {msg && <Alert
                                 alert={alert}/>}
                 <input 
-                        className="mt-5 px-10 py-2 font-bold text-gray-100 w-full lg:w-auto  rounded-xl bg-indigo-500 hover:cursor-pointer hover:bg-indigo-400  "
+                        className="mt-5 px-10 py-2 font-bold text-gray-100 w-full lg:w-auto  rounded-xl bg-indigo-500 hover:cursor-pointer hover:bg-indigo-600  "
                         type="submit"
                         value="Iniciar Sesión"
                 />
             </form>   
             <nav className="mt-5  lg:flex lg:justify-between " >
              <Link
-                    className='my-5 block text-center text-gray-500 '
+                    className='my-5 px-10 py-1 font-semibold  block text-center text-indigo-500 border-2 border-indigo-500 rounded-xl hover:bg-indigo-500 hover:text-white'
                     to="/register">Registrate</Link>    
              <Link
-                    className='my-5 block text-center text-gray-500 '
-                    to="/forget">Recuperar Password</Link>    
+                    className='my-5 px-10  py-1  font-semibold block text-center text-indigo-500 hover:border-2 border-indigo-500 hover:rounded-xl'
+                    to="/forget">Olvidé mi password</Link>    
             </nav>     
         </div>
     </>
