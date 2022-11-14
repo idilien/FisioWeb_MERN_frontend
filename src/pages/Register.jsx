@@ -45,9 +45,9 @@ const Register = () => {
   return (
     <>
         <div className="my-5 ">
-               <h1 className="text-indigo-500 font-black text-3xl text-center">Registrate y <br/> <span className="text-indigo-800 text-4xl"> crea tu cuenta</span></h1>
+               <h1 className="text-indigo-500 font-black text-3xl md:text-5xl text-center">Registrate y <br/> <span className="text-indigo-800 text-4xl md:text-5xl"> crea tu cuenta</span></h1>
         </div>
-        <div className=' mt-20 md:mt-5 p-5 shadow-lg  rounded-lg bg-indigo-100'>
+        <div className=' mt-10 md:my-20 p-5 shadow-lg  rounded-lg bg-indigo-100'>
 
             <form 
                     onSubmit={handleSubmit}       
