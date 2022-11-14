@@ -3,6 +3,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import Alert from '../components/Alert'
 import useAuth from '../hooks/useAuth'
 import axios from "axios"
+import physioImg from "../assets/img/physio_img.jpg"
 
 const Login = () => {
 
@@ -41,7 +42,7 @@ const Login = () => {
   return (
     <>
         <div className="my-5 flex flex-col">
-               <img className="mt-36 h-auto rounded-xl" src="public/physio_img.jpg" alt="img physio" />   
+               <img className="mt-36 h-auto rounded-xl" src={physioImg} alt="img physio" />   
         </div>
         <div>
                <h1 className="text-indigo-500  font-black text-3xl text-center">Iniciar Sesión <br/> <span className="text-indigo-800 text-4xl"> Profesionales</span></h1>
