@@ -40,17 +40,17 @@ const Login = () => {
     const {msg} = alert
   return (
     <>
-        <div className="my-5 ">
-               <h1 className="text-indigo-500 font-black text-3xl text-center">Iniciar Sesión <br/> <span className="text-indigo-800 text-4xl"> Profesionales</span></h1>
-               {/* <img className="" src="public/physio_img" alt="img physio" /> */}
-        
+        <div className="my-5 flex flex-col">
+               <img className="mt-36 h-auto rounded-xl" src="public/physio_img.jpg" alt="img physio" />   
         </div>
-        <div className=' mt-20 md:mt-5 p-5 shadow-lg  rounded-lg bg-gray-200'>
+        <div>
+               <h1 className="text-indigo-500  font-black text-3xl text-center">Iniciar Sesión <br/> <span className="text-indigo-800 text-4xl"> Profesionales</span></h1>
+        <div className='py-9 mt-10 md:mt-20 p-5 shadow-lg  rounded-lg bg-gray-200'>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label
                             className="uppercase text-gray-800 block font-bold"
-                    >
+                            >
                         Email
                     </label>
                     <input 
@@ -59,12 +59,12 @@ const Login = () => {
                             placeholder='correo@correo.com'
                             value={email}
                             onChange= {e => setEmail(e.target.value)}
-                     />
+                            />
                 </div>
                 <div className="my-5 ">
                     <label
                             className="uppercase text-gray-800 block font-bold"
-                    >
+                            >
                         Password
                     </label>
                     <input 
@@ -73,7 +73,7 @@ const Login = () => {
                             placeholder='1234'
                             value={password}
                             onChange= {e => setPassword(e.target.value)}
-                     />
+                            />
                 </div>
                         {msg && <Alert
                                 alert={alert}/>}
@@ -81,7 +81,7 @@ const Login = () => {
                         className="mt-5 px-10 py-2 font-bold text-gray-100 w-full lg:w-auto  rounded-xl bg-indigo-500 hover:cursor-pointer hover:bg-indigo-600  "
                         type="submit"
                         value="Iniciar Sesión"
-                />
+                        />
             </form>   
             <nav className="mt-5  lg:flex lg:justify-between " >
              <Link
@@ -92,6 +92,7 @@ const Login = () => {
                     to="/forget">Olvidé mi password</Link>    
             </nav>     
         </div>
+      </div>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import Alert from '../components/Alert'
 import axios from "axios"
 
@@ -33,6 +33,8 @@ const Register = () => {
           const url = `${import.meta.env.VITE_BACKEND_URL}/api/physios`
           await axios.post(url, {name, email, password}) 
           setAlert({msg: 'Registrado Correctamente, enviado email de confirmación', error:false})
+          
+          navigate('/') 
         } catch (error) {
           setAlert({ msg: error.response.data.msg,error: true })
         }
